@@ -4,12 +4,12 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC68rhNJmo0xWEJewYiVKxbBkpw34z9dHk",
-  authDomain: "stratifind.firebaseapp.com",
-  projectId: "stratifind",
-  storageBucket: "stratifind.firebasestorage.app",
-  messagingSenderId: "879311786961",
-  appId: "1:879311786961:web:1ecf37c0d8fc5cdd79c6f0"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
