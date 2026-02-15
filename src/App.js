@@ -1,14 +1,13 @@
-import { auth } from "./firebase/firebase";
-import RecruiterDashboard from "./pages/RecruiterDashboard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/recruiter/Dashboard";
 
 function App() {
-  console.log("Firebase Auth:", auth);
-
   return (
-    <div>
-      <h1>Firebase Connected 🎉</h1>
-      <RecruiterDashboard />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard recruiterId="recruiter123" />} />
+      </Routes>
+    </Router>
   );
 }
 
